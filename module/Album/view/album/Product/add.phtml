@@ -1,0 +1,12 @@
+<?php
+
+$form=$this->form;
+$form->setAttribute('action', $this->url('album',array('controller'=>'product', 'action' => 'add')));
+$form->prepare();
+echo $this->form()->openTag($form);
+
+
+echo $this->formRow($form->get('images'));
+
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();

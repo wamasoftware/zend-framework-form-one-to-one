@@ -1,0 +1,18 @@
+<?php
+
+$form->setAttribute('action', $this->url('album', array('controller'=>'album','action' => 'add')))
+        ->prepare();
+
+echo $this->form()->openTag($form);
+
+$albumFieldset = $form->get('album');
+
+echo $this->formHidden($form->get('security'));
+echo $this->formHidden($albumFieldset->get('id'));
+echo $this->formRow($albumFieldset->get('title'));
+echo $this->formRow($albumFieldset->get('text'));
+
+echo $this->formInput($form->get('submit'));
+
+echo $this->form()->closeTag($form);
+?>

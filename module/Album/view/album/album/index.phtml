@@ -1,0 +1,128 @@
+<?php
+echo $this->album_helper("Hello","o");
+/*
+$title = 'Post Overview';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<p>
+  <a href="<?php echo $this->url('album', array('action'=>'add'));?>">Add new Post</a>
+</p>
+<?php foreach ($album as $album) : ?>
+<article>
+  <h1><?php echo $this->escapeHtml($album->getArtist());?></h1>
+  <p>
+    <?php echo $this->escapeHtml($album->getTitle());?>
+  </p>
+  <aside>
+    <ul>
+      <li><a href="<?php echo $this->url('album', array(
+        'action'=>'edit',
+        'id'=>$album->getId()
+      ));
+      ?>">Edit this Post</a></li>
+      <li><a href="<?php echo $this->url('album', array(
+        'action'=>'delete',
+        'id'=>$album->getId()
+      ));?>">Delete this Post</a></li>
+    </ul>
+  </aside>
+</article>
+<?php endforeach; ?>
+
+<?php 
+
+
+//View Helper Code
+
+
+// Container Code
+/*
+$reader = new Zend\Config\Reader\Xml();
+$config = $reader->fromFile('D:/xampp/htdocs/ZendDemo/navigation.xml');
+$container = new Zend\Navigation\Navigation($config);*/
+
+//Page Cde
+/*// Add A page
+$container->addPage(
+    Zend\Navigation\Page\AbstractPage::factory(
+        array(
+            'uri' => 'http://www.example.com/HK',
+        )
+    )
+);
+// Add Pages By an Array
+
+$pages = array(
+    array(
+        'label'  => 'Save',
+        'action' => 'save',
+    ),
+    array(
+        'label' =>  'Delete',
+        'action' => 'delete',
+    )
+);
+
+// add two pages
+$container->addPages($pages);
+  echo "<pre>"; print_r($container);
+  
+  echo '<BR>';
+  
+  $container1 = new Zend\Navigation\Navigation(array(
+    array(
+        'label' => 'Page 1',
+        'uri'   => 'page-1',
+        'foo'   => 'bar',
+        'pages' => array(
+            array(
+                'label' => 'Page 1.1',
+                'uri'   => 'page-1.1',
+                'foo'   => 'bar',
+            ),
+            array(
+                'label' => 'Page 1.2',
+                'uri'   => 'page-1.2',
+                'class' => 'my-class',
+            ),
+            array(
+                'type'   => 'uri',
+                'label'  => 'Page 1.3',
+                'uri'    => 'page-1.3',
+                'action' => 'about',
+            )
+        )
+    ),
+    array(
+        'label'      => 'Page 2',
+        'id'         => 'page_2_and_3',
+        'class'      => 'my-class',
+        'module'     => 'page2',
+        'controller' => 'index',
+        'action'     => 'page1',
+    ),
+    array(
+        'label'      => 'Page 3',
+        'id'         => 'page_2_and_3',
+        'module'     => 'page3',
+        'controller' => 'index',
+    ),
+));
+echo 'FInd By...';  
+$found = $container1->findBy('id','page_2_and_3');      // returns Page 2
+echo "<pre>"; print_r($found);
+
+echo 'FindAllByController...';
+$found1 = $container1->findOneByClass('my-class');  // returns Page 1.2 // returns Page 2 and Page 3 
+echo '<pre>'; print_r($found1);
+
+echo 'FindAllByClass...';
+$found2 = $container1->findAllByClass('my-class');  // returns Page 1.2 and Page 2
+echo '<pre>'; print_r($found2);
+*/
+
+//Navigation Links
+/*
+echo $this->view->navigation()->links();
+ */
